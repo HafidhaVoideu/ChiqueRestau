@@ -1,0 +1,103 @@
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-black);
+  padding: 1rem 2rem;
+}
+
+.app__header-logo img {
+  width: 150px;
+}
+.app__header-nav {
+  flex: 1;
+  gap: 1.5rem;
+}
+.app__header-nav li {
+  cursor: pointer;
+}
+.app__header-nav li:hover {
+  color: grey;
+}
+.app__header-login {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.app__header-login a {
+  transition: 0.5s ease;
+}
+.app__header-login a:hover {
+  border-bottom: 1px solid var(--color-golden);
+}
+
+.app__header-login div {
+  width: 1px;
+  height: 30px;
+  background-color: var(--color-grey);
+}
+.app__header-smallscreen {
+  display: none;
+}
+.app__header-smallscreen-links li {
+  margin: 2rem;
+  cursor: pointer;
+  color: var(--color-golden);
+  font-size: 2rem;
+  text-align: center;
+  font-family: var(--font-base);
+}
+
+.app__header-smallscreen-links li:hover {
+  color: white;
+}
+
+.app__header-smallscreen__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+.app__header-smallscreen__overlay .overlay__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: var(--color-golden);
+}
+
+@media screen and (max-width: 2000px) {
+  .app__header-logo img {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .app__header-nav {
+    display: none;
+  }
+  .app__header-smallscreen {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .app__header {
+    padding: 1rem;
+  }
+  .app__header-login {
+    display: none;
+  }
+  .app__header-logo img {
+    width: 110px;
+  }
+}
