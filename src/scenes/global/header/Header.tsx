@@ -8,7 +8,7 @@ const List = () => {
   return (
     <>
       <li className="p__opensans">
-        <a href="#home">ome</a>
+        <a href="#home">Home</a>
       </li>
       <li className="p__opensans">
         <a href="#home">pages</a>
